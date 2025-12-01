@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<style>
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e2dd;
+    color: #333;
+    height: auto;
+   }
+
+ header {
+    display: flex;
+    top: 0;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+   }
+
+   .logo img {
+    height: 80px;
+    padding: 5px 80px;
+   }
+
+   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+    gap: 20px;     
+   }
+
+   nav h1 {
+    font-size:25px;
+    font-weight: 900;
+   }
+
+   nav h3{
+    font-size: 20px;
+   }
+
+   .h3-about a{
+    color: black;
+   }
+
+   .about {
+    text-align: center;
+    align-items: center;
+    padding: 70px 0px;
+   }
+
+   .about h1 {
+    font-size: 50px;
+    color: #5d0000;
+   }
+
+   .about p {
+    line-height: 1.5;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   @media (max-width: 900px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+   .mission {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px;
+    gap:30px
+   }
+
+   .mission-img img {
+    max-width: 600px;
+    height:300px;
+    width: 600px;
+    border-radius: 50px;
+    border: 2px;
+   }
+
+   .mission-text {
+    max-width: 500px;
+   }
+
+   .mission-text p {
+    font-size: 20px;
+   }
+
+   .matter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px;
+    gap:30px
+    }
+
+     @media (max-width: 900px) {
+      .mission {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mission-img {
+        width: 100%;
+      }
+    }
+
+    .matter-text {
+        max-width: 500px;
+    }
+
+    .matter-img img {
+        max-width: 600px;
+    height:300px;
+    width: 600px;
+    border-radius: 50px;
+    border: 2px;
+    }
+
+    .matter-text p {
+        font-size: 20px;
+    }
+
+      @media (max-width: 900px) {
+      .matter {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .matter-img {
+        width: 100%;
+      }
+    }
+
+    .crafted {
+         display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px;
+    gap:30px
+    }
+
+    .crafted-text {
+        max-width: 500px;
+    }
+
+    .crafted-img img {
+    max-width: 600px;
+    height:300px;
+    width: 600px;
+    border-radius: 50px;
+    border: 2px;
+    }
+
+    .crafted-text p{
+        font-size: 20px;
+    }
+
+     @media (max-width: 900px) {
+      .crafted {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .crafted-img {
+        width: 100%;
+      }
+    }
+
+
+    .que {
+       text-align: center;
+    align-items: center;
+    padding: 70px 0px;
+    background-color: #e5c4ae;
+    }
+
+    .que h2 {
+        font-size: 30px;
+    }
+
+    .que p {
+        font-size: 20px;
+    }
+
+    .que button {
+        padding: 25px;
+        border-radius: 100px;
+        border: 100px;
+        font-size: 20px;
+        background-color: rgb(229, 159, 134);
+    }
+ @media (max-width: 900px) {
+      .que {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+.footer {
+  background-color: #0f2b33;
+  padding: 50px 100px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #2d3e42;
+  padding-bottom: 20;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px 0;
+}
+
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-section p,
+.footer-section a {
+  color: white;
+  font-size: 16px;
+  text-align:left ;
+  text-decoration: none;
+  max-width: 350px;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  background-color: #2d3e42;
+  color: #ffffff;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.social-icons a:hover {
+  background-color: #43595f;
+}
+
+.link-columns {
+  display: flex;
+  gap: 50px;
+}
+
+.link-columns ul {
+  list-style: none;
+  color: white;
+}
+
+.link-columns li {
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 15px;
+}
+
+.contact i {
+  color: #ff5c00;
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.footer-section h2{
+  color: white;
+}
+
+.footer-logo img {
+  height: 90px;
+}
+
+  @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+</style>
+<body>
+       <header>
+    <div class="logo">
+        <img src="https://paintmaster.vercel.app/_next/image?url=%2FHero.png&w=256&q=75">
+    </div>
+        <nav>
+            <h3 class="h3-about"><a href="./home.html" style="text-decoration:none"> HOME</h3>
+            <h3 class="h3-about"><a href="./about.html" style="text-decoration:none">ABOUT</a></h3>
+     <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    SERVICES
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="./interior.html">INTERIOR</a></li>
+    <li><a class="dropdown-item" href="./exterior.html">EXTERIOR</a></li>
+    <li><a class="dropdown-item" href="./custom.html">CUSTOM</a></li>
+
+</div>
+            <h1> Paint Masters</h1>
+            <h3 class="h3-about"><a href="./rev.html" style="text-decoration: none;">REVIEWS </a></h3>
+            <h3 class="h3-about"><a href="./contact.html" style="text-decoration: none;" >CONTACTS </a></h3>
+
+        </nav>
+</header>
+
+<div class="">
+<section class="about">
+    <h1> Who We are</h1>
+    <p>
+        More than paint. More than design. We are a passionate team dedicated to transforming everyday spaces into something extraordinary — with nothing but the magic of color.
+    </p>
+</section>
+
+<section class="mission">
+    <div class="mission-img">
+        <img src="https://paintmaster.vercel.app/bg1.png" >
+    </div>
+    
+    <div class="mission-text">
+        <h2> Our Mission</h2>
+        <p >
+            We exist to inspire creativity through the power of color. Whether you're a homeowner, artist, or designer, our mission is to make color choice seamless, joyful, and impactful.
+        </p>
+    </div>
+</div>
+</section>
+
+<section class="matter">
+    <div class="matter-text">
+        <h2>Why Color Matters</h2> 
+        <p>
+            Color is more than visual—it's emotional. It affects mood, energy, and perception. We help you use color as a powerful tool to transform spaces and ideas.
+        </p>
+    </div>
+
+    <div class="matter-img">
+        <img src="https://paintmaster.vercel.app/bg4.png" >
+
+    </div>
+
+</section>
+
+<section class="crafted">
+    <div class="crafted-img">
+        <img src="https://paintmaster.vercel.app/bg3.png">
+    </div>
+
+    <div class="crafted-text">
+        <h2> Crafted With Purpose</h2>
+        <p>
+            Every palette, every shade, every suggestion we offer is hand-picked with intent—balancing beauty, harmony, and versatility.
+        </p>
+    </div>
+
+</section>
+
+<section class="que">
+    <h2> Ready to Color Your Space?</h2>
+    <p>
+        Let us bring beauty, harmony, and personality into your space—one stroke at a time.
+    </p>
+    <button> Contact Us</button>
+</section>
+</div>
+
+ <footer class="footer">  
+        <div class="footer-container">
+
+            <div class="footer-section ">
+                <h3>Welcome to Paint Masters -<br>Professional Paint Studio</h3>
+                <p>We are your one-stop solution for all your painting needs. We offer professional services such as commercial painting, industrial painting, and residential painting.</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+
+          <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+        <div class="link-columns">
+          <ul>
+            <li>Home</a></li>
+            <li>About</a></li>
+            <li>Residential</a></li>
+            <li>Industrial</a></li>
+          </ul>
+          <ul>
+            <li>Commercial</a></li>
+            <li>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+         <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Location</strong><br>Office 309, Purushottam Plaza, Aundh-Baner Rd,<br>Pashan Rd, Pune, Maharashtra 411045</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email Us</strong><br><a href="mailto:livlavish9999@gmail.com">livlavish9999@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> <strong>Phone Us</strong><br><a href="tel:+919403932396">+91 9403932396</a></p>
+      </div>
+
+
+        </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

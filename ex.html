@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+  
+     header {
+    display: flex;
+    top: 0;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(234, 227, 215);
+   }
+
+   .logo img {
+    height: 80px;
+    padding: 5px 80px;
+   }
+
+   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+    gap: 20px;     
+   }
+
+   nav h1 {
+    font-size:25px;
+    font-weight: 900;
+   }
+
+   nav h3{
+    font-size: 20px;
+   }
+
+   .h3-about a{
+    color: black;
+   }
+
+   .about {
+    text-align: center;
+    align-items: center;
+    padding: 70px 0px;
+   }
+
+   .about h1 {
+    font-size: 50px;
+    color: #5d0000;
+   }
+
+   .about p {
+    line-height: 1.5;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    
+   }
+
+    .header{
+        text-align: center;
+    align-items: center;
+    padding: 50px 0px;
+    }
+
+  .head h1{
+        font-size: 30px;
+    } 
+
+    .head p{
+        padding: 0px 50px;
+    }
+
+    .head p{
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    :root{
+      --bg:#e8cdbf;            
+      --ink:#1f2937;           
+      --muted:#6b7280;         
+      --pill:#f4eee9;          
+      --shadow:0 10px 30px rgba(0,0,0,.08), 0 2px 10px rgba(0,0,0,.06);
+      --radius:22px;           
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      overflow-x:hidden;
+    }
+
+    .wrap{max-width:1200px; margin-inline:auto; padding:48px 20px 28px}
+
+
+    
+    .arrows{display:flex; justify-content:center; gap:14px; margin:18px 0 4px}
+    .arrow{width:36px; height:36px; border-radius:999px; background:#fff; box-shadow:var(--shadow); position:relative; border:none; cursor:pointer}
+    .arrow:focus{outline:3px solid rgba(0,0,0,.25); outline-offset:3px}
+    .arrow::before{content:""; position:absolute; inset:0; margin:auto; width:8px; height:8px; border:3px solid #111827; border-top:transparent; border-right:transparent; transform:rotate(45deg)}
+    .arrow.right::before{transform:rotate(-135deg)}
+    .arrow:active{transform:scale(.96)}
+    .arrow{width:36px; height:36px; border-radius:999px; background:#fff; box-shadow:var(--shadow); position:relative}
+    .arrow::before{content:""; position:absolute; inset:0; margin:auto; width:8px; height:8px; border:3px solid #111827; border-top:transparent; border-right:transparent; transform:rotate(45deg)}
+    .arrow.right::before{transform:rotate(-135deg)}
+
+    
+    .rail{
+      display:flex; gap:26px; align-items:stretch;
+      overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+      padding:10px 10px 18px; margin: 14px 0 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .rail::-webkit-scrollbar{height:12px}
+    .rail::-webkit-scrollbar-track{background:rgba(0,0,0,.08); border-radius:999px}
+    .rail::-webkit-scrollbar-thumb{background: rgba(0,0,0,.35); border-radius:999px}
+
+    .card{scroll-snap-align:start; flex:0 0 clamp(240px, 28vw, 260px); height:420px; border-radius:var(--radius); box-shadow:var(--shadow); position:relative; overflow:hidden; transform:translateZ(0); background:#fff}
+    .swatch{position:absolute; inset:0; border-radius:inherit}
+
+    
+    .swatch::after{content:""; position:absolute; inset:0; background:
+      radial-gradient(transparent 60%, rgba(0,0,0,.12)) center/180% 200% no-repeat,
+      radial-gradient(rgba(255,255,255,.14), transparent 40%) 20% 30%/120% 120% no-repeat; mix-blend-mode:soft-light; opacity:.45}
+
+    .name{position:absolute; left:12px; right:12px; bottom:12px; background:var(--pill); color:#111827; font-weight:700; border-radius:14px; padding:14px 16px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,.08)}
+    .card:hover{transform:translateY(-6px); transition:transform .28s ease}
+
+    .sunset{background:
+      linear-gradient(#f8c66c, #f3a85d 38%, #e97d44 70%, #c75637)}
+    .ocean{background:
+      linear-gradient(130deg, #00c2ff, #01a7c2 35%, #01d2a3 75%)}
+    .forest{background:
+      linear-gradient(180deg, #3d5d45, #2e4b38 60%, #223d2d)}
+    .coral{background:
+      linear-gradient(180deg, #ff8a5c, #ff7a54 45%, #f96a49)}
+    .lavender{background:
+      linear-gradient(180deg, #9d7cc3, #8d6cb7 55%, #7f5aac)}
+    .desert{background:
+      linear-gradient(180deg, #efe7dd, #e7d9c9 48%, #dbcab6)}
+    .royal{background:
+      linear-gradient(180deg, #7b006b, #69005b 50%, #59004e)}
+
+    .footer-note{max-width:960px; margin:24px auto 0; text-align:center; color:var(--muted)}
+
+    @media (max-width:640px){
+      .name{font-size:.95rem}
+      .card{height:380px}
+    }
+
+      .img1 {
+        margin-left: 20px;
+        position: relative;
+        top: 10px;
+        animation-name: moving;
+        animation-duration: 25s;
+        animation-iteration-count:infinite;
+        border-radius: 100px;
+        border: 1px;
+
+    }
+
+    @keyframes moving{
+        0%{
+            left: -50px;
+    
+        }
+
+        
+
+        100%{
+            left: 400px;
+        }
+    }
+
+    .footer {
+  background-color: #0f2b33;
+  padding: 50px 100px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #2d3e42;
+  padding-bottom: 20;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px 0;
+}
+
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-section p,
+.footer-section a {
+  color: white;
+  font-size: 16px;
+  text-align:left ;
+  text-decoration: none;
+  max-width: 350px;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  background-color: #2d3e42;
+  color: #ffffff;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.social-icons a:hover {
+  background-color: #43595f;
+}
+
+.link-columns {
+  display: flex;
+  gap: 50px;
+}
+
+.link-columns ul {
+  list-style: none;
+  color: white;
+}
+
+.link-columns li {
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 15px;
+}
+
+.contact i {
+  color: #ff5c00;
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.footer-section h2{
+  color: white;
+}
+
+.footer-logo img {
+  height: 90px;
+}
+  </style>
+</head>
+<body>
+
+      <header>
+    <div class="logo">
+        <img src="https://paintmaster.vercel.app/_next/image?url=%2FHero.png&w=256&q=75">
+    </div>
+        <nav>
+            <h3 class="h3-about"><a href="./home.html" style="text-decoration:none"> HOME</h3>
+            <h3 class="h3-about"><a href="./about.html" style="text-decoration:none">ABOUT</a></h3>
+     <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    SERVICES
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="./interior.html">INTERIOR</a></li>
+    <li><a class="dropdown-item" href="./exterior.html">EXTERIOR</a></li>
+    <li><a class="dropdown-item" href="./custom.html">CUSTOM</a></li>
+
+</div>
+            <h1> Paint Masters</h1>
+            <h3 class="h3-about"><a href="./rev.html" style="text-decoration: none;">REVIEWS </a></h3>
+            <h3 class="h3-about"><a href="./contact.html" style="text-decoration: none;" >CONTACTS </a></h3>
+
+        </nav>
+</header>
+      <div class="header">
+    <h1>Discover Our Exclusive Wall Texture Collection</h1>
+    <p>Elevate your interiors with our curated range of artistic wall textures. From modern minimalism to bold abstract patterns, our textures redefine how walls express personality.</p>
+
+  </div>
+     <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T1.png">     
+     <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T5.png">
+     <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T3.png">
+     <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T6.png">
+      <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T4.png">
+        <img height="200px" class="img1" width="200px" src="https://paintmaster.vercel.app/T2.png">
+
+  <main class="wrap">
+    <h1>Color Catalogue</h1>
+    <p class="tagline">Welcome to our curated Color Catalogue – a perfect place to explore color themes that inspire, energize, and transform your living spaces. Each palette below is carefully designed to reflect natural moods, seasons, and aesthetics. Hover to experience the unique transformation of each theme.</p>
+
+    <div class="arrows" aria-label="Scroll color cards">
+      <button class="arrow" id="prev" type="button" aria-label="Scroll left"></button>
+      <button class="arrow right" id="next" type="button" aria-label="Scroll right"></button>
+    </div>
+
+    <section class="rail" aria-label="Color palettes (scroll horizontally)">
+      <article class="card">
+        <div class="swatch sunset"></div>
+        <div class="name">Sunset Glow</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch ocean"></div>
+        <div class="name">Ocean Breeze</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch forest"></div>
+        <div class="name">Forest Whisper</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch coral"></div>
+        <div class="name">Coral Bloom</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch lavender"></div>
+        <div class="name">Lavender Mist</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch desert"></div>
+        <div class="name">Desert Sand</div>
+      </article>
+
+      <article class="card">
+        <div class="swatch royal"></div>
+        <div class="name">Royal Velvet</div>
+      </article>
+    </section>
+
+    <p class="footer-note">Looking for something specific or custom? We’re here to help you find the perfect color combination that reflects your personality and lifestyle.</p>
+ <footer class="footer">  
+        <div class="footer-container">
+
+            <div class="footer-section ">
+                <h3>Welcome to Paint Masters -<br>Professional Paint Studio</h3>
+                <p>We are your one-stop solution for all your painting needs. We offer professional services such as commercial painting, industrial painting, and residential painting.</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+
+          <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+        <div class="link-columns">
+          <ul>
+            <li>Home</a></li>
+            <li>About</a></li>
+            <li>Residential</a></li>
+            <li>Industrial</a></li>
+          </ul>
+          <ul>
+            <li>Commercial</a></li>
+            <li>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+         <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Location</strong><br>Office 309, Purushottam Plaza, Aundh-Baner Rd,<br>Pashan Rd, Pune, Maharashtra 411045</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email Us</strong><br><a href="mailto:livlavish9999@gmail.com">livlavish9999@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> <strong>Phone Us</strong><br><a href="tel:+919403932396">+91 9403932396</a></p>
+      </div>
+
+  </main>
+  <script>
+    (function(){
+      const rail = document.querySelector('.rail');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      if(!rail || !prev || !next) return;
+      function step(){
+        const card = rail.querySelector('.card');
+        const gap = 26; // matches CSS gap
+        return (card ? card.getBoundingClientRect().width : 340) + gap;
+      }
+      prev.addEventListener('click', ()=> rail.scrollBy({left: -step(), behavior:'smooth'}));
+      next.addEventListener('click', ()=> rail.scrollBy({left:  step(), behavior:'smooth'}));
+      // keyboard support
+      document.addEventListener('keydown', (e)=>{
+        if(e.key==='ArrowLeft') prev.click();
+        if(e.key==='ArrowRight') next.click();
+      });
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
